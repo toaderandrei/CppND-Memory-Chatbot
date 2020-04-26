@@ -67,6 +67,15 @@ public:
         std::swap(lhs._currentNode, rhs._currentNode);
     }
 
+    friend void clear(ChatBot &chatBot) {
+        chatBot._chatLogic = nullptr;
+        if (chatBot._image != NULL) {
+            chatBot._image = NULL;
+        }
+        chatBot._currentNode = nullptr;
+        chatBot._rootNode = nullptr;
+    }
+
     ////
     //// EOF STUDENT CODE
 
